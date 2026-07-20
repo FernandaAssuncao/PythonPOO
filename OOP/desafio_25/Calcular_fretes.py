@@ -15,7 +15,7 @@ class Moto(Transporte):
         self.fator = 0.50
 
     def calcular_frete(self):
-        pass
+        return f'O valor do frete para {self.distancia}Km é R${self.distancia * self.fator}'
 
 class Caminhao(Transporte):
     def __init__(self, distancia):
@@ -23,7 +23,10 @@ class Caminhao(Transporte):
         self.fator = 1.20
 
     def calcular_frete(self):
-        pass
+        if self.distancia >= 50:
+            return f'O valor do frete para {self.distancia}Km é R${self.distancia * self.fator}'
+        else:
+            return 'O valor minimo para o caminhao é de 50Km'
 
 class Drone(Transporte):
     def __init__(self, distancia):
@@ -31,5 +34,7 @@ class Drone(Transporte):
         self.fator = 9.50
 
     def calcular_frete(self):
-        pass
-    
+        if self.distancia <= 10:
+            return f'O valor do frete para {self.distancia}Km é R${self.distancia * self.fator}'
+        else:
+            return 'O valor maximo para o drone é de 10km'
