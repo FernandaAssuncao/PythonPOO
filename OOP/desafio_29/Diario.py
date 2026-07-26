@@ -6,7 +6,7 @@ class Diario:
         self.__mensagems = []
 
     def escrever(self, msg):
-        self.__mensagems.append(msg)
+        self.__mensagems.append(msg.strip())
 
     def ler(self, senha):
         if senha.strip() == self.__senha:

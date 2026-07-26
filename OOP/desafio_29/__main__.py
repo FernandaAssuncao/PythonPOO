@@ -7,3 +7,4 @@ if __name__ == '__main__':
     p1.escrever('Ele me trata como uma rainha')
     p1.escrever('Ele me ama profundamente')
     p1.ler('Fernanda')
+    inspect(p1, private=True)
